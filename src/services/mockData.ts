@@ -1,20 +1,4 @@
-
-import { 
-  BookOpen, 
-  Smartphone, 
-  Laptop, 
-  Headphones, 
-  Monitor, 
-  Sofa, 
-  Bike, 
-  Camera, 
-  Music, 
-  Film, 
-  Coffee, 
-  Car, 
-  Ticket,
-  Users 
-} from "lucide-react";
+import { Users } from "lucide-react";
 
 export type Category = {
   id: string;
@@ -59,50 +43,90 @@ export type User = {
 
 // Categories data
 export const categories: Category[] = [
-  { id: 'books', name: 'Books', icon: BookOpen, type: 'buy' },
-  { id: 'electronics', name: 'Electronics', icon: Smartphone, type: 'buy' },
-  { id: 'gadgets', name: 'Gadgets', icon: Headphones, type: 'buy' },
-  { id: 'laptops', name: 'Laptops', icon: Laptop, type: 'buy' },
+  { 
+    id: 'books', 
+    name: 'Books', 
+    imageUrl: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'buy' 
+  },
+  { 
+    id: 'electronics', 
+    name: 'Electronics', 
+    imageUrl: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'buy' 
+  },
+  { 
+    id: 'gadgets', 
+    name: 'Gadgets', 
+    imageUrl: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'buy' 
+  },
+  { 
+    id: 'laptops', 
+    name: 'Laptops', 
+    imageUrl: 'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'buy' 
+  },
   
-  { id: 'furniture', name: 'Furniture', icon: Sofa, type: 'rent' },
-  { id: 'electronics-rent', name: 'Electronics', icon: Monitor, type: 'rent' },
-  { id: 'bikes', name: 'Bikes', icon: Bike, type: 'rent' },
-  { id: 'cameras', name: 'Cameras', icon: Camera, type: 'rent' },
+  { 
+    id: 'furniture', 
+    name: 'Furniture', 
+    imageUrl: 'https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'rent' 
+  },
+  { 
+    id: 'electronics-rent', 
+    name: 'Electronics', 
+    imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'rent' 
+  },
+  { 
+    id: 'bikes', 
+    name: 'Bikes', 
+    imageUrl: 'https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'rent' 
+  },
+  { 
+    id: 'cameras', 
+    name: 'Cameras', 
+    imageUrl: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=200&h=200&auto=format&fit=crop', 
+    type: 'rent' 
+  },
   
   { 
     id: 'music', 
     name: 'Music', 
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
   { 
     id: 'streaming', 
     name: 'Streaming', 
-    imageUrl: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1626379953822-baec19c3accd?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
   { 
     id: 'food', 
     name: 'Food', 
-    imageUrl: 'https://images.unsplash.com/photo-1484659619207-9165d119dafe?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1484659619207-9165d119dafe?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
   { 
     id: 'rides', 
     name: 'Rides', 
-    imageUrl: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
   { 
     id: 'tickets', 
     name: 'Tickets', 
-    imageUrl: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
   { 
     id: 'group-buys', 
     name: 'Group Buys', 
-    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=200&h=200', 
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=200&h=200&auto=format&fit=crop', 
     type: 'share' 
   },
 ];

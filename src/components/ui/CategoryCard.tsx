@@ -20,19 +20,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, className }) => {
         className
       )}
     >
-      {category.imageUrl ? (
-        <div className="w-12 h-12 rounded-full overflow-hidden mb-3">
-          <img 
-            src={category.imageUrl} 
-            alt={category.name} 
-            className="w-full h-full object-cover"
-          />
-        </div>
-      ) : (
-        <div className="w-12 h-12 rounded-full purple-gradient flex items-center justify-center text-white mb-3">
-          {category.icon && <category.icon size={20} />}
-        </div>
-      )}
+      <div className="w-12 h-12 rounded-full overflow-hidden mb-3">
+        <img 
+          src={category.imageUrl} 
+          alt={category.name} 
+          className="w-full h-full object-cover"
+        />
+      </div>
       <span className="font-medium text-center">{category.name}</span>
     </Link>
   );
