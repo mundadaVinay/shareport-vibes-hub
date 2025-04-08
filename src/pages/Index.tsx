@@ -27,11 +27,11 @@ const Index = () => {
     }, 300);
   }, []);
 
-  const rebuyCategoriesData = getCategoriesByType('rebuy');
+  const buyCategoriesData = getCategoriesByType('buy');
   const rentCategoriesData = getCategoriesByType('rent');
   const shareCategoriesData = getCategoriesByType('share');
 
-  const rebuyListingsData = getListingsByType('rebuy').slice(0, 4);
+  const buyListingsData = getListingsByType('buy').slice(0, 4);
   const rentListingsData = getListingsByType('rent').slice(0, 4);
   const shareListingsData = getListingsByType('share').slice(0, 4);
 
@@ -46,10 +46,10 @@ const Index = () => {
 
       {/* Main Category Navigation Tabs */}
       <section className="container mx-auto px-4 py-8">
-        <Tabs defaultValue="rebuy" className="w-full">
+        <Tabs defaultValue="buy" className="w-full">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
             <TabsList className="h-12 p-1 bg-gray-100/80 backdrop-blur-sm">
-              <TabsTrigger value="rebuy" className="h-10 px-8 text-base">Rebuy</TabsTrigger>
+              <TabsTrigger value="buy" className="h-10 px-8 text-base">Buy</TabsTrigger>
               <TabsTrigger value="rent" className="h-10 px-8 text-base">Rent</TabsTrigger>
               <TabsTrigger value="share" className="h-10 px-8 text-base">Share</TabsTrigger>
             </TabsList>
@@ -66,10 +66,10 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Rebuy Content */}
-          <TabsContent value="rebuy" className="mt-0">
+          {/* Buy Content */}
+          <TabsContent value="buy" className="mt-0">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
-              {rebuyCategoriesData.map((category, index) => (
+              {buyCategoriesData.map((category, index) => (
                 <CategoryCard 
                   key={category.id} 
                   category={category} 
@@ -78,12 +78,12 @@ const Index = () => {
             </div>
 
             <SectionHeading 
-              title="Latest Rebuy Listings" 
+              title="Latest Buy Listings" 
               subtitle="Browse quality pre-owned items from students at your college"
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-              {rebuyListingsData.map((listing, index) => (
+              {buyListingsData.map((listing, index) => (
                 <ListingCard 
                   key={listing.id} 
                   listing={listing} 
@@ -94,7 +94,7 @@ const Index = () => {
 
             <div className="text-center">
               <Button asChild className="purple-gradient">
-                <Link to="/rebuy">View All Rebuy Listings</Link>
+                <Link to="/buy">View All Buy Listings</Link>
               </Button>
             </div>
           </TabsContent>
@@ -204,7 +204,7 @@ const Index = () => {
         <div className="bg-white rounded-2xl p-8 md:p-12 text-center shadow-sm border border-gray-100">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to join the community?</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            List your items for rebuy, rent out your belongings, or find people to share subscription costs.
+            List your items for buy, rent out your belongings, or find people to share subscription costs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="purple-gradient">Create Listing</Button>

@@ -207,7 +207,7 @@ export const listings: Listing[] = [
     location: 'Columbia University',
     images: [
       'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=2039&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&w=2000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1580480055273-00dcc994a43e?q=80&w=2000&auto=format&fit=crop'
     ],
     owner: {
       id: 'user5',
@@ -256,7 +256,7 @@ export const listings: Listing[] = [
     owner: {
       id: 'user7',
       name: 'Jordan Smith',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop',
+      avatar: 'https://images.unsplash.com/photo-1544005313-9feb3edaa68d?q=80&w=1976&auto=format&fit=crop',
       rating: 4.8
     },
     createdAt: '2025-03-02',

@@ -97,7 +97,7 @@ const FeaturedSlider: React.FC<FeaturedSliderProps> = ({ listings }) => {
           }`}
         >
           <div className="inline-block mb-4 px-3 py-1 bg-shareport-purple/90 text-white text-sm font-medium rounded-full">
-            {currentListing.type === 'rebuy' ? 'Rebuy' : currentListing.type === 'rent' ? 'Rent' : 'Share'}
+            {currentListing.type === 'buy' ? 'Buy' : currentListing.type === 'rent' ? 'Rent' : 'Share'}
           </div>
           <h2 className="text-2xl md:text-4xl font-bold mb-3">{currentListing.title}</h2>
           <p className="text-white/80 mb-6 max-w-2xl line-clamp-2">{currentListing.description}</p>
@@ -114,8 +114,8 @@ const FeaturedSlider: React.FC<FeaturedSliderProps> = ({ listings }) => {
               </div>
             </div>
             <div className="text-2xl font-bold">
-              ${currentListing.price}
-              {currentListing.type !== 'rebuy' && currentListing.duration && (
+              ₹{currentListing.price}
+              {currentListing.type !== 'buy' && currentListing.duration && (
                 <span className="text-sm font-normal">/{currentListing.duration.toLowerCase().replace('per ', '')}</span>
               )}
             </div>
