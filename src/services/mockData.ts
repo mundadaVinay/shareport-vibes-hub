@@ -1,3 +1,4 @@
+
 import { 
   BookOpen, 
   Smartphone, 
@@ -116,14 +117,14 @@ export const listings: Listing[] = [
     type: 'buy',
     category: 'books',
     condition: 'Like New',
-    location: 'Stanford University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1974&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1973&auto=format&fit=crop'
     ],
     owner: {
       id: 'user1',
-      name: 'Alex Johnson',
+      name: 'Arjun Sharma',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1480&auto=format&fit=crop',
       rating: 4.8
     },
@@ -138,14 +139,14 @@ export const listings: Listing[] = [
     type: 'buy',
     category: 'electronics',
     condition: 'Good',
-    location: 'MIT',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1611472173362-3f53dbd65d80?q=80&w=1974&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1565104781149-e8109775beab?q=80&w=2015&auto=format&fit=crop'
     ],
     owner: {
       id: 'user2',
-      name: 'Maya Peters',
+      name: 'Priya Patel',
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop',
       rating: 4.9
     },
@@ -160,14 +161,14 @@ export const listings: Listing[] = [
     type: 'buy',
     category: 'gadgets',
     condition: 'Excellent',
-    location: 'UCLA',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1976&auto=format&fit=crop'
     ],
     owner: {
       id: 'user3',
-      name: 'Tyler Wong',
+      name: 'Vikram Singh',
       avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=1480&auto=format&fit=crop',
       rating: 4.6
     },
@@ -182,14 +183,14 @@ export const listings: Listing[] = [
     type: 'buy',
     category: 'laptops',
     condition: 'Like New',
-    location: 'NYU',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1452&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=2070&auto=format&fit=crop'
     ],
     owner: {
       id: 'user4',
-      name: 'Jamie Rodriguez',
+      name: 'Aditya Kapoor',
       avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop',
       rating: 5.0
     },
@@ -204,14 +205,14 @@ export const listings: Listing[] = [
     type: 'rent',
     category: 'furniture',
     duration: 'Per Week',
-    location: 'Columbia University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=2039&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1580480055273-00dcc994a43e?q=80&w=2000&auto=format&fit=crop'
     ],
     owner: {
       id: 'user5',
-      name: 'Sam Taylor',
+      name: 'Neha Gupta',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop',
       rating: 4.7
     },
@@ -226,14 +227,14 @@ export const listings: Listing[] = [
     type: 'rent',
     category: 'electronics-rent',
     duration: 'Per Day',
-    location: 'UC Berkeley',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1629429407756-28d4acf2cc52?q=80&w=2066&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1593152167544-085d3b9c4938?q=80&w=2071&auto=format&fit=crop'
     ],
     owner: {
       id: 'user6',
-      name: 'Riley Clark',
+      name: 'Rohit Mehta',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop',
       rating: 4.5
     },
@@ -248,14 +249,14 @@ export const listings: Listing[] = [
     type: 'rent',
     category: 'bikes',
     duration: 'Per Day',
-    location: 'Harvard University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=2070&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?q=80&w=2068&auto=format&fit=crop'
     ],
     owner: {
       id: 'user7',
-      name: 'Jordan Smith',
+      name: 'Ananya Reddy',
       avatar: 'https://images.unsplash.com/photo-1544005313-9feb3edaa68d?q=80&w=1976&auto=format&fit=crop',
       rating: 4.8
     },
@@ -270,14 +271,14 @@ export const listings: Listing[] = [
     type: 'rent',
     category: 'cameras',
     duration: 'Per Day',
-    location: 'Princeton University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?q=80&w=2070&auto=format&fit=crop'
     ],
     owner: {
       id: 'user8',
-      name: 'Casey Jones',
+      name: 'Rahul Joshi',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
       rating: 4.9
     },
@@ -292,14 +293,14 @@ export const listings: Listing[] = [
     type: 'share',
     category: 'music',
     duration: 'Per Month',
-    location: 'Yale University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=1974&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1611339555312-e607c8352fd7?q=80&w=2074&auto=format&fit=crop'
     ],
     owner: {
       id: 'user9',
-      name: 'Taylor Reed',
+      name: 'Kavita Nair',
       avatar: 'https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1964&auto=format&fit=crop',
       rating: 4.7
     },
@@ -314,14 +315,14 @@ export const listings: Listing[] = [
     type: 'share',
     category: 'streaming',
     duration: 'Per Month',
-    location: 'Duke University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1170&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1626379953822-baec19c3accd?q=80&w=1170&auto=format&fit=crop'
     ],
     owner: {
       id: 'user10',
-      name: 'Morgan Lee',
+      name: 'Siddharth Malhotra',
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1022&auto=format&fit=crop',
       rating: 4.6
     },
@@ -336,14 +337,14 @@ export const listings: Listing[] = [
     type: 'share',
     category: 'food',
     duration: 'Per Month',
-    location: 'University of Chicago',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1615719413546-198b25453f85?q=80&w=1036&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1484659619207-9165d119dafe?q=80&w=1170&auto=format&fit=crop'
     ],
     owner: {
       id: 'user11',
-      name: 'Avery Kim',
+      name: 'Ishaan Kumar',
       avatar: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1123&auto=format&fit=crop',
       rating: 4.8
     },
@@ -352,20 +353,20 @@ export const listings: Listing[] = [
   },
   {
     id: '12',
-    title: 'Weekend Ride to Chicago',
-    description: 'Driving to Chicago this weekend (Mar 15-17). Have 3 empty seats. Split gas and tolls, approximately ₹750 per person.',
+    title: 'Weekend Ride to Jaipur City',
+    description: 'Driving to Jaipur City this weekend (Mar 15-17). Have 3 empty seats. Split gas and tolls, approximately ₹750 per person.',
     price: 750,
     type: 'share',
     category: 'rides',
     duration: 'One Time',
-    location: 'University of Michigan',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?q=80&w=2066&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1931&auto=format&fit=crop'
     ],
     owner: {
       id: 'user12',
-      name: 'Quinn Wilson',
+      name: 'Divya Agarwal',
       avatar: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=1935&auto=format&fit=crop',
       rating: 4.9
     },
@@ -374,20 +375,20 @@ export const listings: Listing[] = [
   },
   {
     id: '13',
-    title: 'Concert Tickets - The Weeknd (2 available)',
-    description: 'Two tickets to The Weeknd concert at Madison Square Garden on April 10. Section B, Row 15. Selling at face value.',
+    title: 'Concert Tickets - Divine (2 available)',
+    description: 'Two tickets to Divine concert at Jaipur Stadium on April 10. Section B, Row 15. Selling at face value.',
     price: 5500,
     type: 'share',
     category: 'tickets',
     duration: 'One Time',
-    location: 'NYU',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=2070&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=2070&auto=format&fit=crop'
     ],
     owner: {
       id: 'user13',
-      name: 'Jesse Patel',
+      name: 'Riya Desai',
       avatar: 'https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=1989&auto=format&fit=crop',
       rating: 5.0
     },
@@ -402,14 +403,14 @@ export const listings: Listing[] = [
     type: 'share',
     category: 'group-buys',
     duration: 'Per Month',
-    location: 'Stanford University',
+    location: 'Manipal University Jaipur',
     images: [
       'https://images.unsplash.com/photo-1612103198005-b298c0e5eb42?q=80&w=1974&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1605752651290-6c7b8e0b0e9f?q=80&w=1169&auto=format&fit=crop'
     ],
     owner: {
       id: 'user14',
-      name: 'Blake Thompson',
+      name: 'Varun Khanna',
       avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop',
       rating: 4.7
     },
@@ -421,9 +422,9 @@ export const listings: Listing[] = [
 // Current user data
 export const currentUser: User = {
   id: 'user20',
-  name: 'Jordan Taylor',
-  email: 'jordan.taylor@university.edu',
-  college: 'Stanford University',
+  name: 'Aarav Verma',
+  email: 'aarav.verma@manipal.edu',
+  college: 'Manipal University Jaipur',
   avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop',
   memberSince: '2024-09-01',
   listings: ['5', '9', '11'],
