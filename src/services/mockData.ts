@@ -5,7 +5,7 @@ import {
   Laptop, 
   Headphones, 
   Monitor, 
-  Couch, 
+  Sofa, // Changed from Couch to Sofa which is available
   Bike, 
   Camera, 
   Music, 
@@ -63,7 +63,7 @@ export const categories: Category[] = [
   { id: 'gadgets', name: 'Gadgets', icon: Headphones, type: 'rebuy' },
   { id: 'laptops', name: 'Laptops', icon: Laptop, type: 'rebuy' },
   
-  { id: 'furniture', name: 'Furniture', icon: Couch, type: 'rent' },
+  { id: 'furniture', name: 'Furniture', icon: Sofa, type: 'rent' }, // Changed from Couch to Sofa
   { id: 'electronics-rent', name: 'Electronics', icon: Monitor, type: 'rent' },
   { id: 'bikes', name: 'Bikes', icon: Bike, type: 'rent' },
   { id: 'cameras', name: 'Cameras', icon: Camera, type: 'rent' },
