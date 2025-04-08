@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Filter, Search, SlidersHorizontal, X } from "lucide-react";
@@ -24,8 +23,8 @@ import ListingCard from "@/components/ui/ListingCard";
 import CategoryCard from "@/components/ui/CategoryCard";
 import { getListingsByType, getCategoriesByType } from "@/services/mockData";
 
-const RebuyCategoryPage = () => {
-  const [rebuyListings, setRebuyListings] = useState([]);
+const BuyCategoryPage = () => {
+  const [buyListings, setBuyListings] = useState([]);
   const [categories, setCategories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -48,8 +47,8 @@ const RebuyCategoryPage = () => {
     // Simulate data loading
     setIsLoading(true);
     setTimeout(() => {
-      setRebuyListings(getListingsByType("rebuy"));
-      setCategories(getCategoriesByType("rebuy"));
+      setBuyListings(getListingsByType("buy"));
+      setCategories(getCategoriesByType("buy"));
       setIsLoading(false);
     }, 300);
   }, [categoryFromUrl]);
@@ -78,7 +77,7 @@ const RebuyCategoryPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SectionHeading 
-        title="Rebuy Marketplace" 
+        title="Buy Marketplace" 
         subtitle="Browse quality pre-owned items from students around you" 
       />
       
@@ -229,9 +228,9 @@ const RebuyCategoryPage = () => {
                 </Card>
               ))}
             </div>
-          ) : rebuyListings.length > 0 ? (
+          ) : buyListings.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rebuyListings.map((listing: any, index) => (
+              {buyListings.map((listing: any, index) => (
                 <ListingCard 
                   key={listing.id} 
                   listing={listing}
@@ -354,4 +353,4 @@ const RebuyCategoryPage = () => {
   );
 };
 
-export default RebuyCategoryPage;
+export default BuyCategoryPage;

@@ -10,7 +10,6 @@ interface CategoryCardProps {
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ category, className }) => {
-  const Icon = category.icon;
   const path = `/${category.type}?category=${category.id}`;
 
   return (
@@ -21,9 +20,19 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, className }) => {
         className
       )}
     >
-      <div className="w-12 h-12 rounded-full purple-gradient flex items-center justify-center text-white mb-3">
-        <Icon size={20} />
-      </div>
+      {category.imageUrl ? (
+        <div className="w-12 h-12 rounded-full overflow-hidden mb-3">
+          <img 
+            src={category.imageUrl} 
+            alt={category.name} 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ) : (
+        <div className="w-12 h-12 rounded-full purple-gradient flex items-center justify-center text-white mb-3">
+          {category.icon && <category.icon size={20} />}
+        </div>
+      )}
       <span className="font-medium text-center">{category.name}</span>
     </Link>
   );

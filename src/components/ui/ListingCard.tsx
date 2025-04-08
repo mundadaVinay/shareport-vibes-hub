@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Heart, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,17 +18,17 @@ interface ListingCardProps {
 
 const ListingCard: React.FC<ListingCardProps> = ({ listing, className, index = 0 }) => {
   const formatPrice = () => {
-    if (listing.type === 'rebuy') {
-      return `$${listing.price}`;
+    if (listing.type === 'buy') {
+      return `₹${listing.price}`;
     } else if (listing.type === 'rent' || listing.type === 'share') {
-      return `$${listing.price}${listing.duration ? `/${listing.duration.toLowerCase().replace('per ', '')}` : ''}`;
+      return `₹${listing.price}${listing.duration ? `/${listing.duration.toLowerCase().replace('per ', '')}` : ''}`;
     }
   };
 
   const getBadgeLabel = () => {
     switch (listing.type) {
-      case 'rebuy':
-        return 'Rebuy';
+      case 'buy':
+        return 'Buy';
       case 'rent':
         return 'Rent';
       case 'share':
@@ -41,7 +40,7 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing, className, index = 0
 
   const getBadgeColor = () => {
     switch (listing.type) {
-      case 'rebuy':
+      case 'buy':
         return 'bg-shareport-purple/90 text-white';
       case 'rent':
         return 'bg-shareport-blue/90 text-gray-900';

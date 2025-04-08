@@ -1,11 +1,10 @@
-
 import { 
   BookOpen, 
   Smartphone, 
   Laptop, 
   Headphones, 
   Monitor, 
-  Sofa, // Changed from Couch to Sofa which is available
+  Sofa, 
   Bike, 
   Camera, 
   Music, 
@@ -19,8 +18,9 @@ import {
 export type Category = {
   id: string;
   name: string;
-  icon: any;
-  type: 'rebuy' | 'rent' | 'share';
+  icon?: any;
+  imageUrl?: string;
+  type: 'buy' | 'rent' | 'share';
 };
 
 export type Listing = {
@@ -28,7 +28,7 @@ export type Listing = {
   title: string;
   description: string;
   price: number;
-  type: 'rebuy' | 'rent' | 'share';
+  type: 'buy' | 'rent' | 'share';
   category: string;
   condition?: string;
   duration?: string;
@@ -58,22 +58,52 @@ export type User = {
 
 // Categories data
 export const categories: Category[] = [
-  { id: 'books', name: 'Books', icon: BookOpen, type: 'rebuy' },
-  { id: 'electronics', name: 'Electronics', icon: Smartphone, type: 'rebuy' },
-  { id: 'gadgets', name: 'Gadgets', icon: Headphones, type: 'rebuy' },
-  { id: 'laptops', name: 'Laptops', icon: Laptop, type: 'rebuy' },
+  { id: 'books', name: 'Books', icon: BookOpen, type: 'buy' },
+  { id: 'electronics', name: 'Electronics', icon: Smartphone, type: 'buy' },
+  { id: 'gadgets', name: 'Gadgets', icon: Headphones, type: 'buy' },
+  { id: 'laptops', name: 'Laptops', icon: Laptop, type: 'buy' },
   
-  { id: 'furniture', name: 'Furniture', icon: Sofa, type: 'rent' }, // Changed from Couch to Sofa
+  { id: 'furniture', name: 'Furniture', icon: Sofa, type: 'rent' },
   { id: 'electronics-rent', name: 'Electronics', icon: Monitor, type: 'rent' },
   { id: 'bikes', name: 'Bikes', icon: Bike, type: 'rent' },
   { id: 'cameras', name: 'Cameras', icon: Camera, type: 'rent' },
   
-  { id: 'music', name: 'Music', icon: Music, type: 'share' },
-  { id: 'streaming', name: 'Streaming', icon: Film, type: 'share' },
-  { id: 'food', name: 'Food', icon: Coffee, type: 'share' },
-  { id: 'rides', name: 'Rides', icon: Car, type: 'share' },
-  { id: 'tickets', name: 'Tickets', icon: Ticket, type: 'share' },
-  { id: 'group-buys', name: 'Group Buys', icon: Users, type: 'share' },
+  { 
+    id: 'music', 
+    name: 'Music', 
+    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
+  { 
+    id: 'streaming', 
+    name: 'Streaming', 
+    imageUrl: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
+  { 
+    id: 'food', 
+    name: 'Food', 
+    imageUrl: 'https://images.unsplash.com/photo-1484659619207-9165d119dafe?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
+  { 
+    id: 'rides', 
+    name: 'Rides', 
+    imageUrl: 'https://images.unsplash.com/photo-1471958680802-1345a694ba6d?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
+  { 
+    id: 'tickets', 
+    name: 'Tickets', 
+    imageUrl: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
+  { 
+    id: 'group-buys', 
+    name: 'Group Buys', 
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=200&h=200', 
+    type: 'share' 
+  },
 ];
 
 // Listings data
@@ -82,8 +112,8 @@ export const listings: Listing[] = [
     id: '1',
     title: 'Physics Textbook - University Year 1',
     description: 'Almost new physics textbook for first-year students. Covers mechanics, thermodynamics, and basic quantum physics.',
-    price: 25,
-    type: 'rebuy',
+    price: 1200,
+    type: 'buy',
     category: 'books',
     condition: 'Like New',
     location: 'Stanford University',
@@ -104,8 +134,8 @@ export const listings: Listing[] = [
     id: '2',
     title: 'iPhone 13 Pro - Great Condition',
     description: 'iPhone 13 Pro, 128GB, Graphite color. Minor scratches on the back but perfect screen. Includes original charger and box.',
-    price: 450,
-    type: 'rebuy',
+    price: 35000,
+    type: 'buy',
     category: 'electronics',
     condition: 'Good',
     location: 'MIT',
@@ -126,8 +156,8 @@ export const listings: Listing[] = [
     id: '3',
     title: 'Wireless Noise-Cancelling Headphones',
     description: 'Sony WH-1000XM4 headphones, purchased 6 months ago. Great sound quality and noise cancellation.',
-    price: 180,
-    type: 'rebuy',
+    price: 12000,
+    type: 'buy',
     category: 'gadgets',
     condition: 'Excellent',
     location: 'UCLA',
@@ -148,8 +178,8 @@ export const listings: Listing[] = [
     id: '4',
     title: 'MacBook Pro 14" M1 Pro',
     description: 'MacBook Pro with M1 Pro chip, 16GB RAM, 512GB SSD. Used for one semester for design projects.',
-    price: 1200,
-    type: 'rebuy',
+    price: 92000,
+    type: 'buy',
     category: 'laptops',
     condition: 'Like New',
     location: 'NYU',
@@ -170,7 +200,7 @@ export const listings: Listing[] = [
     id: '5',
     title: 'Modern Study Desk with Chair',
     description: 'Contemporary study desk with ergonomic chair. Perfect for small dorm rooms. Available for the semester.',
-    price: 15,
+    price: 800,
     type: 'rent',
     category: 'furniture',
     duration: 'Per Week',
@@ -192,7 +222,7 @@ export const listings: Listing[] = [
     id: '6',
     title: 'Gaming Monitor - 27" 144Hz',
     description: 'High refresh rate gaming monitor, perfect for gaming sessions or design work. Rent for a few days or weeks.',
-    price: 10,
+    price: 500,
     type: 'rent',
     category: 'electronics-rent',
     duration: 'Per Day',
@@ -214,7 +244,7 @@ export const listings: Listing[] = [
     id: '7',
     title: 'City Bike - Perfect for Campus',
     description: 'Trek FX 2 bike, perfect for getting around campus. Available for daily, weekly, or monthly rental.',
-    price: 8,
+    price: 400,
     type: 'rent',
     category: 'bikes',
     duration: 'Per Day',
@@ -236,7 +266,7 @@ export const listings: Listing[] = [
     id: '8',
     title: 'DSLR Camera with Lens Kit',
     description: 'Canon EOS Rebel T7 with 18-55mm lens. Great for photography projects or weekend trips. Includes SD card and bag.',
-    price: 20,
+    price: 1000,
     type: 'rent',
     category: 'cameras',
     duration: 'Per Day',
@@ -257,8 +287,8 @@ export const listings: Listing[] = [
   {
     id: '9',
     title: 'Spotify Premium Family (2 slots)',
-    description: 'Sharing 2 slots on my Spotify Premium Family plan. $5 per month per slot. Ad-free music and offline listening.',
-    price: 5,
+    description: 'Sharing 2 slots on my Spotify Premium Family plan. ₹250 per month per slot. Ad-free music and offline listening.',
+    price: 250,
     type: 'share',
     category: 'music',
     duration: 'Per Month',
@@ -279,8 +309,8 @@ export const listings: Listing[] = [
   {
     id: '10',
     title: 'Netflix Standard Plan Share',
-    description: 'Sharing Netflix Standard plan (1080p, 2 screens). $4 per month for your own profile.',
-    price: 4,
+    description: 'Sharing Netflix Standard plan (1080p, 2 screens). ₹200 per month for your own profile.',
+    price: 200,
     type: 'share',
     category: 'streaming',
     duration: 'Per Month',
@@ -301,8 +331,8 @@ export const listings: Listing[] = [
   {
     id: '11',
     title: 'Grubhub+ Membership Split',
-    description: 'Split my Grubhub+ membership for free delivery on food orders. $3 per month.',
-    price: 3,
+    description: 'Split my Grubhub+ membership for free delivery on food orders. ₹150 per month.',
+    price: 150,
     type: 'share',
     category: 'food',
     duration: 'Per Month',
@@ -323,8 +353,8 @@ export const listings: Listing[] = [
   {
     id: '12',
     title: 'Weekend Ride to Chicago',
-    description: 'Driving to Chicago this weekend (Mar 15-17). Have 3 empty seats. Split gas and tolls, approximately $15 per person.',
-    price: 15,
+    description: 'Driving to Chicago this weekend (Mar 15-17). Have 3 empty seats. Split gas and tolls, approximately ₹750 per person.',
+    price: 750,
     type: 'share',
     category: 'rides',
     duration: 'One Time',
@@ -346,7 +376,7 @@ export const listings: Listing[] = [
     id: '13',
     title: 'Concert Tickets - The Weeknd (2 available)',
     description: 'Two tickets to The Weeknd concert at Madison Square Garden on April 10. Section B, Row 15. Selling at face value.',
-    price: 120,
+    price: 5500,
     type: 'share',
     category: 'tickets',
     duration: 'One Time',
@@ -367,8 +397,8 @@ export const listings: Listing[] = [
   {
     id: '14',
     title: 'Amazon Prime Student Group Buy',
-    description: 'Setting up an Amazon Prime Student group (up to 4 people). $3.75 per month per person for Prime benefits.',
-    price: 3.75,
+    description: 'Setting up an Amazon Prime Student group (up to 4 people). ₹180 per month per person for Prime benefits.',
+    price: 180,
     type: 'share',
     category: 'group-buys',
     duration: 'Per Month',
@@ -407,7 +437,7 @@ export const currentUser: User = {
 };
 
 // Helper functions
-export const getListingsByType = (type: 'rebuy' | 'rent' | 'share'): Listing[] => {
+export const getListingsByType = (type: 'buy' | 'rent' | 'share'): Listing[] => {
   return listings.filter(listing => listing.type === type);
 };
 
@@ -419,7 +449,7 @@ export const getListingById = (id: string): Listing | undefined => {
   return listings.find(listing => listing.id === id);
 };
 
-export const getCategoriesByType = (type: 'rebuy' | 'rent' | 'share'): Category[] => {
+export const getCategoriesByType = (type: 'buy' | 'rent' | 'share'): Category[] => {
   return categories.filter(category => category.type === type);
 };
 
