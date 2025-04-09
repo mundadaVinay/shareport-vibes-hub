@@ -7,14 +7,14 @@
 
 @layer base {
   :root {
-    --background: 180 35% 95%;
-    --foreground: 210 40% 16%;
+    --background: 220 30% 93%;
+    --foreground: 220 40% 16%;
 
-    --card: 180 30% 98%;
-    --card-foreground: 210 40% 16%;
+    --card: 220 30% 96%;
+    --card-foreground: 220 40% 16%;
 
-    --popover: 180 30% 98%;
-    --popover-foreground: 210 40% 16%;
+    --popover: 220 30% 96%;
+    --popover-foreground: 220 40% 16%;
 
     --primary: 255 86% 65%;
     --primary-foreground: 210 40% 98%;
@@ -22,28 +22,28 @@
     --secondary: 258 30% 54%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 230 20% 95%;
+    --muted: 230 20% 90%;
     --muted-foreground: 220 15% 45%;
 
-    --accent: 330 100% 65%;
+    --accent: 330 95% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 20% 90%;
-    --input: 230 20% 90%;
+    --border: 230 20% 85%;
+    --input: 230 20% 85%;
     --ring: 258 70% 75%;
 
     --radius: 1rem;
 
-    --sidebar-background: 230 25% 95%;
-    --sidebar-foreground: 240 5.3% 20%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 230 25% 95%;
-    --sidebar-accent: 230 20% 85%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 230 20% 85%;
+    --sidebar-background: 222 25% 20%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 220 15% 95%;
+    --sidebar-primary-foreground: 223 25% 20%;
+    --sidebar-accent: 223 25% 30%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 223 25% 25%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -53,21 +53,22 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background-image: radial-gradient(circle at 80% 150px, rgba(241, 156, 187, 0.2), transparent 35%),
-                      radial-gradient(circle at 20% 80%, rgba(107, 182, 255, 0.2), transparent 35%);
+    background-image: 
+      radial-gradient(circle at 80% 150px, rgba(155, 135, 245, 0.15), transparent 35%),
+      radial-gradient(circle at 20% 80%, rgba(107, 182, 255, 0.15), transparent 35%);
     background-attachment: fixed;
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-lg;
+    @apply bg-gray-800/70 backdrop-blur-md border border-gray-700/50 shadow-lg;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-md rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+    @apply bg-gray-800/80 backdrop-blur-md border border-gray-700/50 shadow-md rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
   }
 
   .glass-card-dark {
-    @apply bg-black/5 backdrop-blur-sm border border-black/5 shadow-md rounded-2xl;
+    @apply bg-gray-800/90 backdrop-blur-sm border border-gray-700/50 shadow-md rounded-2xl;
   }
 
   .purple-gradient {
@@ -91,7 +92,7 @@
   }
   
   .dark-card {
-    @apply bg-gradient-to-b from-card to-background border border-black/5 shadow-md hover:shadow-primary/10;
+    @apply bg-gradient-to-b from-gray-800/90 to-gray-800/70 border border-gray-700/20 shadow-md hover:shadow-primary/10;
   }
   
   .glow {
