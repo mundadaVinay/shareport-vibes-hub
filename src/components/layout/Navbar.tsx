@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex items-center space-x-1">
           <NavLink to="/" icon={<Home size={18} />} label="Home" />
-          <NavLink to="/rebuy" icon={<ShoppingBag size={18} />} label="rebuy" />
+          <NavLink to="/rebuy" icon={<ShoppingBag size={18} />} label="Buy" />
           <NavLink to="/rent" icon={<Calendar size={18} />} label="Rent" />
           <NavLink to="/share" icon={<Share2 size={18} />} label="Share" />
         </nav>
@@ -115,7 +115,7 @@ const Navbar = () => {
             </Link>
             <Link to="/rebuy" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
               <ShoppingBag size={20} />
-              <span>Rebuy</span>
+              <span>Buy</span>
             </Link>
             <Link to="/rent" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
               <Calendar size={20} />

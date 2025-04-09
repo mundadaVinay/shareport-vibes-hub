@@ -61,7 +61,7 @@ const Index = () => {
               </Button>
               <Button variant="outline" size="sm" className="gap-1.5">
                 <MapPin size={16} />
-                Stanford
+                Manipal Jaipur
               </Button>
             </div>
           </div>
@@ -173,7 +173,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <SectionHeading 
               title="Trending in Your College" 
-              subtitle="Popular items and shares at Stanford University" 
+              subtitle="Popular items and shares at Manipal University Jaipur" 
               className="mb-0 md:mb-0"
             />
             <div className="flex items-center mt-4 md:mt-0">
