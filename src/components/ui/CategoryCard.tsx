@@ -16,18 +16,18 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, className }) => {
     <Link
       to={path}
       className={cn(
-        "flex flex-col items-center p-4 rounded-xl glass-card hover:shadow-md hover:bg-white/90 transition-all duration-300 animate-slide-up",
+        "flex flex-col items-center p-4 rounded-xl glass-card glow hover:bg-card/90 transition-all duration-300 animate-slide-up",
         className
       )}
     >
-      <div className="w-12 h-12 rounded-full overflow-hidden mb-3">
+      <div className="w-12 h-12 rounded-full overflow-hidden mb-3 ring-2 ring-primary/30 shadow-md">
         <img 
           src={category.imageUrl} 
           alt={category.name} 
           className="w-full h-full object-cover"
         />
       </div>
-      <span className="font-medium text-center">{category.name}</span>
+      <span className="font-medium text-center text-foreground/90">{category.name}</span>
     </Link>
   );
 };
