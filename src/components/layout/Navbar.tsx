@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, User, Search, ShoppingBag, Home, Calendar, Share2, PlusCircle } from "lucide-react";
+import { Menu, X, User, Search, ShoppingBag, Home, Calendar, Share2, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -41,10 +41,10 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 rounded-full purple-gradient flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full vibrant-gradient flex items-center justify-center">
             <span className="text-white font-bold">S</span>
           </div>
-          <span className="font-bold text-xl text-gradient">SharePort</span>
+          <span className="font-bold text-xl text-gradient-vibrant">SharePort</span>
         </Link>
 
         {/* Navigation - Desktop */}
@@ -53,12 +53,13 @@ const Navbar = () => {
           <NavLink to="/rebuy" icon={<ShoppingBag size={18} />} label="Buy" />
           <NavLink to="/rent" icon={<Calendar size={18} />} label="Rent" />
           <NavLink to="/share" icon={<Share2 size={18} />} label="Share" />
-          <NavLink 
-            to="/create-listing" 
-            icon={<PlusCircle size={18} />} 
-            label="Create Listing" 
-            className="bg-shareport-purple text-white hover:bg-shareport-purple/90"
-          />
+          <Link 
+            to="/create-listing"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-shareport-bright-accent shadow-lg hover:shadow-shareport-bright-accent/40 transition-all duration-300 transform hover:scale-105 ml-2"
+            aria-label="Create Listing"
+          >
+            <Plus size={20} className="text-white" />
+          </Link>
         </nav>
 
         {/* Search + Profile - Desktop */}
@@ -68,16 +69,16 @@ const Navbar = () => {
             <Input 
               type="search" 
               placeholder="Search in SharePort..." 
-              className="pl-10 pr-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 focus:bg-white transition-colors border-0 focus:ring-1 focus:ring-shareport-purple"
+              className="pl-10 pr-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:bg-white/30 transition-colors border-0 focus:ring-1 focus:ring-shareport-bright-accent"
             />
           </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-shareport-purple/10">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-shareport-bright-accent/10">
                 <Avatar className="h-9 w-9">
                   <AvatarImage src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100" alt="User" />
-                  <AvatarFallback className="bg-shareport-purple text-white">JD</AvatarFallback>
+                  <AvatarFallback className="bg-shareport-bright-accent text-white">JD</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -111,31 +112,31 @@ const Navbar = () => {
               <Input 
                 type="search" 
                 placeholder="Search in SharePort..." 
-                className="pl-10 pr-4 py-2 rounded-full bg-gray-100 border-0"
+                className="pl-10 pr-4 py-2 rounded-full bg-white/10 border-0"
               />
             </div>
             
-            <Link to="/" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+            <Link to="/" className="flex items-center space-x-2 p-2 rounded-md hover:bg-white/10">
               <Home size={20} />
               <span>Home</span>
             </Link>
-            <Link to="/rebuy" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+            <Link to="/rebuy" className="flex items-center space-x-2 p-2 rounded-md hover:bg-white/10">
               <ShoppingBag size={20} />
               <span>Buy</span>
             </Link>
-            <Link to="/rent" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+            <Link to="/rent" className="flex items-center space-x-2 p-2 rounded-md hover:bg-white/10">
               <Calendar size={20} />
               <span>Rent</span>
             </Link>
-            <Link to="/share" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+            <Link to="/share" className="flex items-center space-x-2 p-2 rounded-md hover:bg-white/10">
               <Share2 size={20} />
               <span>Share</span>
             </Link>
-            <Link to="/create-listing" className="flex items-center space-x-2 p-2 rounded-md bg-shareport-purple/90 text-white hover:bg-shareport-purple">
-              <PlusCircle size={20} />
+            <Link to="/create-listing" className="flex items-center space-x-2 p-2 rounded-md bg-shareport-bright-accent text-white hover:bg-shareport-bright-accent/90">
+              <Plus size={20} />
               <span>Create Listing</span>
             </Link>
-            <Link to="/profile" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
+            <Link to="/profile" className="flex items-center space-x-2 p-2 rounded-md hover:bg-white/10">
               <User size={20} />
               <span>Profile</span>
             </Link>
@@ -156,8 +157,8 @@ const NavLink = ({ to, icon, label, className = "" }: { to: string; icon: React.
       to={to} 
       className={`flex items-center space-x-1 px-4 py-2 rounded-full transition-colors ${
         isActive 
-        ? "bg-shareport-purple text-white" 
-        : "hover:bg-gray-100"
+        ? "bg-shareport-bright-accent text-white shadow-md" 
+        : "hover:bg-white/10"
       } ${className}`}
     >
       {icon}

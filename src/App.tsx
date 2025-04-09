@@ -28,6 +28,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="profile" element={<ProfilePage />} />
             <Route path="listing/:id" element={<ListingDetailsPage />} />
+            <Route path="rebuy" element={<RebuyCategoryPage />} />
             <Route path="buy" element={<RebuyCategoryPage />} />
             <Route path="rent" element={<RentCategoryPage />} />
             <Route path="share" element={<ShareCategoryPage />} />
