@@ -50,7 +50,7 @@ const Navbar = () => {
         {/* Navigation - Desktop */}
         <nav className="hidden md:flex items-center space-x-1">
           <NavLink to="/" icon={<Home size={18} />} label="Home" />
-          <NavLink to="/rebuy" icon={<ShoppingBag size={18} />} label="Rebuy" />
+          <NavLink to="/buy" icon={<ShoppingBag size={18} />} label="Rebuy" />
           <NavLink to="/rent" icon={<Calendar size={18} />} label="Rent" />
           <NavLink to="/share" icon={<Share2 size={18} />} label="Share" />
         </nav>
