@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, User, Search, ShoppingBag, Home, Calendar, Share2 } from "lucide-react";
+import { Menu, X, User, Search, ShoppingBag, Home, Calendar, Share2, PlusCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -53,6 +53,12 @@ const Navbar = () => {
           <NavLink to="/rebuy" icon={<ShoppingBag size={18} />} label="Buy" />
           <NavLink to="/rent" icon={<Calendar size={18} />} label="Rent" />
           <NavLink to="/share" icon={<Share2 size={18} />} label="Share" />
+          <NavLink 
+            to="/create-listing" 
+            icon={<PlusCircle size={18} />} 
+            label="Create Listing" 
+            className="bg-shareport-purple text-white hover:bg-shareport-purple/90"
+          />
         </nav>
 
         {/* Search + Profile - Desktop */}
@@ -125,6 +131,10 @@ const Navbar = () => {
               <Share2 size={20} />
               <span>Share</span>
             </Link>
+            <Link to="/create-listing" className="flex items-center space-x-2 p-2 rounded-md bg-shareport-purple/90 text-white hover:bg-shareport-purple">
+              <PlusCircle size={20} />
+              <span>Create Listing</span>
+            </Link>
             <Link to="/profile" className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-100">
               <User size={20} />
               <span>Profile</span>
@@ -137,7 +147,7 @@ const Navbar = () => {
 };
 
 // NavLink component for desktop navigation
-const NavLink = ({ to, icon, label }: { to: string; icon: React.ReactNode; label: string }) => {
+const NavLink = ({ to, icon, label, className = "" }: { to: string; icon: React.ReactNode; label: string; className?: string }) => {
   const location = useLocation();
   const isActive = location.pathname === to || (to !== "/" && location.pathname.startsWith(to));
 
@@ -148,7 +158,7 @@ const NavLink = ({ to, icon, label }: { to: string; icon: React.ReactNode; label
         isActive 
         ? "bg-shareport-purple text-white" 
         : "hover:bg-gray-100"
-      }`}
+      } ${className}`}
     >
       {icon}
       <span>{label}</span>

@@ -13,6 +13,7 @@ import ListingDetailsPage from "./pages/ListingDetailsPage";
 import RebuyCategoryPage from "./pages/RebuyCategoryPage";
 import RentCategoryPage from "./pages/RentCategoryPage";
 import ShareCategoryPage from "./pages/ShareCategoryPage";
+import CreateListingPage from "./pages/CreateListingPage";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="buy" element={<RebuyCategoryPage />} />
             <Route path="rent" element={<RentCategoryPage />} />
             <Route path="share" element={<ShareCategoryPage />} />
+            <Route path="create-listing" element={<CreateListingPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
