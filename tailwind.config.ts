@@ -75,8 +75,8 @@ export default {
 					blue: '#D3E4FD',
 					brightBlue: '#1EAEDB',
 					skyBlue: '#33C3F0',
-					'bright-accent': '#F97316', // Added the missing color
-					orange: '#F97316', // Added to match with the vibrant-gradient class
+					'bright-accent': '#F97316', 
+					orange: '#F97316',
 				}
 			},
 			borderRadius: {
