@@ -55,7 +55,7 @@ const Navbar = () => {
           <NavLink to="/share" icon={<Share2 size={18} />} label="Share" />
           <Link 
             to="/create-listing"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-shareport-bright-accent shadow-lg hover:shadow-shareport-bright-accent/40 transition-all duration-300 transform hover:scale-105 ml-2"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-primary shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 ml-2"
             aria-label="Create Listing"
           >
             <Plus size={20} className="text-white" />
@@ -69,16 +69,16 @@ const Navbar = () => {
             <Input 
               type="search" 
               placeholder="Search in SharePort..." 
-              className="pl-10 pr-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:bg-white/30 transition-colors border-0 focus:ring-1 focus:ring-shareport-bright-accent"
+              className="pl-10 pr-4 py-2 rounded-full bg-white/10 hover:bg-white/20 focus:bg-white/30 transition-colors border-0 focus:ring-1 focus:ring-primary"
             />
           </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-shareport-bright-accent/10">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10">
                 <Avatar className="h-9 w-9">
                   <AvatarImage src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=100" alt="User" />
-                  <AvatarFallback className="bg-shareport-bright-accent text-white">JD</AvatarFallback>
+                  <AvatarFallback className="bg-primary text-white">JD</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -132,7 +132,7 @@ const Navbar = () => {
               <Share2 size={20} />
               <span>Share</span>
             </Link>
-            <Link to="/create-listing" className="flex items-center space-x-2 p-2 rounded-md bg-shareport-bright-accent text-white hover:bg-shareport-bright-accent/90">
+            <Link to="/create-listing" className="flex items-center space-x-2 p-2 rounded-md bg-primary text-white hover:bg-primary/90">
               <Plus size={20} />
               <span>Create Listing</span>
             </Link>
@@ -157,7 +157,7 @@ const NavLink = ({ to, icon, label, className = "" }: { to: string; icon: React.
       to={to} 
       className={`flex items-center space-x-1 px-4 py-2 rounded-full transition-colors ${
         isActive 
-        ? "bg-shareport-bright-accent text-white shadow-md" 
+        ? "bg-primary text-white shadow-md" 
         : "hover:bg-white/10"
       } ${className}`}
     >
